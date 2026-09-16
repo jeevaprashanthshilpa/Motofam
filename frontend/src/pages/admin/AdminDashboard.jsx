@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import StatsCard from "../../components/dashboard/StatsCard";
-import ListingTableRow from "../../components/dashboard/ListingTableRow";
 import { ShieldCheck, Clock, Users, Bike, AlertTriangle, CheckCircle, XCircle } from "lucide-react";
-import axios from "axios";
 
 export default function AdminDashboard() {
   const [stats, setStats] = useState({
@@ -12,7 +10,7 @@ export default function AdminDashboard() {
     expiringSoon: 12,
   });
 
-  const [pendingListings, setPendingListings] = useState([
+  const [pendingListings, setPendingListings] = useState(() => [
     {
       id: 101,
       title: "Yamaha R15 V4",
@@ -48,7 +46,7 @@ export default function AdminDashboard() {
         <div>
           <h1 className="text-2xl font-black text-surface-text tracking-tight">Admin Control Panel</h1>
           <p className="text-xs text-surface-muted mt-1">
-            Manage listing approvals, monitor marketplace activity, and oversee 30-day verification cycles[cite: 1].
+            Manage listing approvals, monitor marketplace activity, and oversee 30-day verification cycles.
           </p>
         </div>
       </div>

@@ -1,13 +1,14 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Phone, MessageSquare, ShieldCheck, Calendar, Gauge, MapPin, CheckCircle, ArrowLeft } from "lucide-react";
+import { Phone, MessageSquare, ShieldCheck, Calendar, Gauge, MapPin, ArrowLeft, Scale } from "lucide-react";
 import StatusBadge from "../../components/common/StatusBadge";
+import { useCompareStore } from "../../store/useCompareStore";
 
 export default function BikeDetailPage() {
   const { id } = useParams();
 
   // Mock bike detail state (in a full implementation, fetched via ID using Axios)
-  const [bike, setBike] = useState({
+  const [bike] = useState({
     id: id || 1,
     title: "Royal Enfield Classic 350 Signals Edition",
     brand: "Royal Enfield",
@@ -32,6 +33,19 @@ export default function BikeDetailPage() {
   });
 
   const [activeImage, setActiveImage] = useState(bike.images[0]);
+
+  const bikeId = bike.id || bike._id;
+  const addToCompare = useCompareStore((state) => state.addToCompare);
+  const removeFromCompare = useCompareStore((state) => state.removeFromCompare);
+  const inCompare = useCompareStore((state) => state.isInCompare(bikeId));
+
+  const handleCompareToggle = () => {
+    if (inCompare) {
+      removeFromCompare(bikeId);
+    } else if (!addToCompare(bike)) {
+      alert("You can compare up to 4 bikes at a time. Remove one to add another.");
+    }
+  };
 
   return (
     <div className="max-w-7xl mx-auto px-6 py-8 space-y-8">
@@ -148,7 +162,7 @@ export default function BikeDetailPage() {
                 <ShieldCheck size={18} className="text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
                 <div className="text-xs space-y-0.5">
                   <div className="font-bold text-emerald-700 dark:text-emerald-400">Admin Verified Listing</div>
-                  <p className="text-surface-muted">RC and seller identity checked. 30-day active verification cycle enforced[cite: 1].</p>
+                  <p className="text-surface-muted">RC and seller identity checked. 30-day active verification cycle enforced.</p>
                 </div>
               </div>
             </div>
@@ -172,6 +186,19 @@ export default function BikeDetailPage() {
                 <Phone size={16} />
                 <span>Call Seller Directly</span>
               </a>
+
+              <button
+                type="button"
+                onClick={handleCompareToggle}
+                className={`w-full py-3 rounded-xl text-xs font-bold transition flex items-center justify-center gap-2 cursor-pointer border ${
+                  inCompare
+                    ? "bg-surface-primary/10 border-surface-primary text-surface-primary"
+                    : "border-surface-border text-surface-text hover:border-surface-primary hover:text-surface-primary"
+                }`}
+              >
+                <Scale size={16} />
+                <span>{inCompare ? "Added to Compare" : "Add to Compare"}</span>
+              </button>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Bike, Plus, ShieldCheck, Clock, AlertTriangle, Edit, Trash2, RefreshCw } from "lucide-react";
+import { Bike, Plus, Clock, AlertTriangle, Edit, Trash2, RefreshCw } from "lucide-react";
 import StatsCard from "../../components/dashboard/StatsCard";
 import StatusBadge from "../../components/common/StatusBadge";
 
@@ -46,7 +46,7 @@ export default function SellerDashboard() {
         <div>
           <h1 className="text-2xl font-black text-surface-text tracking-tight">Seller Dashboard</h1>
           <p className="text-xs text-surface-muted mt-1">
-            Manage your active listings, track 30-day verification lifecycles, and submit new bikes[cite: 1].
+            Manage your active listings, track 30-day verification lifecycles, and submit new bikes.
           </p>
         </div>
         <Link

@@ -1,5 +1,5 @@
 import { Routes, Route, Navigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import ProtectedRoute from "./ProtectedRoute";
 
 // Public Pages
 import HomePage from "../pages/public/HomePage";
@@ -20,21 +20,6 @@ import EditBikePage from "../pages/seller/EditBikePage";
 import AdminDashboard from "../pages/admin/AdminDashboard";
 import ListingApprovals from "../pages/admin/ListingApprovals";
 import VerificationAudit from "../pages/admin/VerificationAudit";
-
-// Role Guard Component
-function ProtectedRoute({ children, allowedRoles }) {
-  const { user, isAuthenticated } = useAuth();
-
-  if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
-  }
-
-  if (allowedRoles && !allowedRoles.includes(user?.role)) {
-    return <Navigate to="/" replace />;
-  }
-
-  return children;
-}
 
 export default function AppRoutes() {
   return (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ShieldCheck, AlertTriangle, RefreshCw, Search, Calendar, History } from "lucide-react";
+import { RefreshCw, Search, Calendar, History } from "lucide-react";
 import StatusBadge from "../../components/common/StatusBadge";
 
 export default function VerificationAudit() {
@@ -57,7 +57,7 @@ export default function VerificationAudit() {
         <div>
           <h1 className="text-2xl font-black text-surface-text tracking-tight">30-Day Verification Audit Log</h1>
           <p className="text-xs text-surface-muted mt-1">
-            Monitor listing lifecycles, track active verification periods, and handle automated deactivations for stale inventory[cite: 1].
+            Monitor listing lifecycles, track active verification periods, and handle automated deactivations for stale inventory.
           </p>
         </div>
       </div>

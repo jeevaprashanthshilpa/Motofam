@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { Lock, Mail, User, ArrowRight, ShieldCheck } from "lucide-react";
+import { Lock, Mail, User, ArrowRight } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 
 export default function RegisterPage() {
@@ -19,9 +19,9 @@ export default function RegisterPage() {
     setError("");
     setIsLoading(true);
 
-    try {
-      // Simulate backend registration request
-      setTimeout(() => {
+    // Simulate backend registration request
+    setTimeout(() => {
+      try {
         const mockUser = {
           name,
           email,
@@ -37,11 +37,11 @@ export default function RegisterPage() {
         } else {
           navigate("/bikes");
         }
-      }, 800);
-    } catch (err) {
-      setError("Registration failed. Please try again with valid details.");
-      setIsLoading(false);
-    }
+      } catch {
+        setError("Registration failed. Please try again with valid details.");
+        setIsLoading(false);
+      }
+    }, 800);
   };
 
   return (
@@ -54,7 +54,7 @@ export default function RegisterPage() {
             THEMOTO<span className="text-surface-primary">FAM</span>
           </Link>
           <p className="text-xs text-surface-muted">
-            Create an account to buy or list verified two-wheelers[cite: 1].
+            Create an account to buy or list verified two-wheelers.
           </p>
         </div>
 

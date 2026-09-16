@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import axios from "axios";
+import { bikeService } from "../services/bikeService";
 
 export function useListings(initialFilters = {}) {
   const [bikes, setBikes] = useState([]);
@@ -11,18 +11,11 @@ export function useListings(initialFilters = {}) {
     setIsLoading(true);
     setError(null);
     try {
-      // Build query parameters from filters
-      const params = new URLSearchParams();
-      if (filters.brand) params.append("brand", filters.brand);
-      if (filters.maxPrice) params.append("maxPrice", filters.maxPrice);
-      if (filters.minYear) params.append("minYear", filters.minYear);
-      if (filters.verifiedOnly) params.append("verified", "true");
-
-      const response = await axios.get(`/api/bikes?${params.toString()}`);
-      setBikes(response.data.bikes || response.data || []);
+      const data = await bikeService.getBikes(filters);
+      setBikes(data.bikes || data || []);
     } catch (err) {
       setError(err.message || "Failed to fetch bike listings");
-      // Fallback mock data if API is not yet running
+      // Fallback mock data if the backend API is not yet running
       setBikes([
         {
           id: 1,

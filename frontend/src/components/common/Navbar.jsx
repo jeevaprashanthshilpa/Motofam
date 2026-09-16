@@ -1,4 +1,4 @@
-import { Sun, Moon, Bike, PlusCircle, User } from "lucide-react";
+import { Sun, Moon, PlusCircle, User } from "lucide-react";
 import { useTheme } from "../../context/ThemeContext";
 import { Link } from "react-router-dom";
 

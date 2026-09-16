@@ -28,7 +28,7 @@ export default function ListingApprovals() {
     },
   ]);
 
-  const handleAction = (id, actionType) => {
+  const handleAction = (id, _actionType) => {
     setApprovals((prev) => prev.filter((item) => (item._id || item.id) !== id));
     // In a full implementation, this triggers an API call to update listing status
   };
@@ -39,7 +39,7 @@ export default function ListingApprovals() {
       <div className="border-b border-surface-border pb-6">
         <h1 className="text-2xl font-black text-surface-text tracking-tight">Listing Approval Queue</h1>
         <p className="text-xs text-surface-muted mt-1">
-          Review vehicle registration certificates (RC) and seller ID proofs before clearing listings for public marketplace view[cite: 1].
+          Review vehicle registration certificates (RC) and seller ID proofs before clearing listings for public marketplace view.
         </p>
       </div>
 

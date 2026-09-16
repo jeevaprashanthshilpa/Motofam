@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Upload, X, Image as ImageIcon } from "lucide-react";
+import { Upload, X } from "lucide-react";
 
 export default function StepImageUpload({ formData, updateFormData, onNext, onPrev }) {
   const [images, setImages] = useState(formData.images || []);
@@ -35,7 +35,7 @@ export default function StepImageUpload({ formData, updateFormData, onNext, onPr
       <div className="border-b border-surface-border pb-4">
         <h3 className="text-lg font-bold text-surface-text">Step 3: Upload Photos</h3>
         <p className="text-xs text-surface-muted mt-1">
-          Upload clear photos of your two-wheeler from multiple angles (up to 8 images). High-quality photos get faster admin approval[cite: 8].
+          Upload clear photos of your two-wheeler from multiple angles (up to 8 images). High-quality photos get faster admin approval.
         </p>
       </div>
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Bike, ShieldCheck, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import StepBasicInfo from "../../components/forms/StepBasicInfo";
 import StepCondition from "../../components/forms/StepCondition";
 import StepImageUpload from "../../components/forms/StepImageUpload";
@@ -35,17 +35,17 @@ export default function AddBikePage() {
 
   const handleFinalSubmit = async () => {
     setIsSubmitting(true);
-    try {
-      // Simulate backend submission for admin review
-      setTimeout(() => {
+    // Simulate backend submission for admin review
+    setTimeout(() => {
+      try {
         setIsSubmitting(false);
-        alert("Bike listing submitted successfully! Pending admin approval[cite: 1].");
+        alert("Bike listing submitted successfully! Pending admin approval.");
         navigate("/seller/dashboard");
-      }, 1200);
-    } catch (error) {
-      console.error("Submission failed", error);
-      setIsSubmitting(false);
-    }
+      } catch (error) {
+        console.error("Submission failed", error);
+        setIsSubmitting(false);
+      }
+    }, 1200);
   };
 
   return (
@@ -65,7 +65,7 @@ export default function AddBikePage() {
       <div className="border-b border-surface-border pb-6 space-y-1">
         <h1 className="text-2xl font-black text-surface-text tracking-tight">List a New Two-Wheeler</h1>
         <p className="text-xs text-surface-muted">
-          Complete the steps below to submit your vehicle for administrative verification and marketplace publication[cite: 1].
+          Complete the steps below to submit your vehicle for administrative verification and marketplace publication.
         </p>
       </div>
 

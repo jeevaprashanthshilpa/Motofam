@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { Bike, ShieldCheck, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 
 export default function EditBikePage() {
   const { id } = useParams();
@@ -31,17 +31,17 @@ export default function EditBikePage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    try {
-      // Simulate backend update request
-      setTimeout(() => {
+    // Simulate backend update request
+    setTimeout(() => {
+      try {
         setIsSubmitting(false);
         alert("Bike listing updated successfully!");
         navigate("/seller/dashboard");
-      }, 1000);
-    } catch (error) {
-      console.error("Update failed", error);
-      setIsSubmitting(false);
-    }
+      } catch (error) {
+        console.error("Update failed", error);
+        setIsSubmitting(false);
+      }
+    }, 1000);
   };
 
   return (
@@ -61,7 +61,7 @@ export default function EditBikePage() {
       <div className="border-b border-surface-border pb-6 space-y-1">
         <h1 className="text-2xl font-black text-surface-text tracking-tight">Edit Bike Listing #{id}</h1>
         <p className="text-xs text-surface-muted">
-          Update your vehicle details, pricing, or specification status[cite: 1].
+          Update your vehicle details, pricing, or specification status.
         </p>
       </div>
 

@@ -29,7 +29,7 @@ export default function BrowsePage() {
       <div className="border-b border-surface-border pb-6 space-y-2">
         <h1 className="text-2xl font-black text-surface-text tracking-tight">Browse Verified Two-Wheelers</h1>
         <p className="text-xs text-surface-muted">
-          Explore admin-verified new and pre-owned bikes across India with transparent pricing and active 30-day verification[cite: 1].
+          Explore admin-verified new and pre-owned bikes across India with transparent pricing and active 30-day verification.
         </p>
       </div>
 

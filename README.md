@@ -9,32 +9,32 @@
 ## 📌 Project Overview
 
 * **Institution:** PES University, Department of Computer Applications
-* **Student:** Jeeva P (SRN: PES1PG25CA091)[cite: 1]
-* **Faculty Guide:** Shivaleela B Hiremath, Associate Professor[cite: 1]
-* **Project Type:** Capstone Project • Phase 1[cite: 1]
+* **Student:** Jeeva P (SRN: PES1PG25CA091)
+* **Faculty Guide:** Shivaleela B Hiremath, Associate Professor
+* **Project Type:** Capstone Project • Phase 1
 
 ---
 
 ## ⚡ Key Features
 
-* **Admin-Approved Listings:** Every submitted bike listing undergoes administrative review and approval before becoming visible to public buyers[cite: 1].
-* **30-Day Re-Verification Lifecycle:** The system tracks listing ages and prompts sellers every 30 days to re-confirm availability[cite: 1]. Unverified or inactive bikes are automatically deactivated or removed[cite: 1].
-* **Advanced Search & Filtering:** Filter motorcycles by brand, model, price, year, mileage, condition, and location[cite: 1].
-* **Side-by-Side Comparison:** Compare bike specifications across multiple models simultaneously to make informed purchase decisions[cite: 1].
-* **Direct Buyer-to-Seller Communication:** Instant connectivity via direct Click-to-Call (`tel:`) and WhatsApp chat triggers[cite: 1].
-* **Role-Based Portals:** Granular separation of concerns for Buyers, Sellers/Dealers, and System Administrators[cite: 1].
-* **Listing Management:** Sellers can post multiple photos, add detailed bike specifications, track approval status (Pending, Approved, Rejected, Expired), or temporarily deactivate listings[cite: 1].
+* **Admin-Approved Listings:** Every submitted bike listing undergoes administrative review and approval before becoming visible to public buyers.
+* **30-Day Re-Verification Lifecycle:** The system tracks listing ages and prompts sellers every 30 days to re-confirm availability. Unverified or inactive bikes are automatically deactivated or removed.
+* **Advanced Search & Filtering:** Filter motorcycles by brand, model, price, year, mileage, condition, and location.
+* **Side-by-Side Comparison:** Compare bike specifications across multiple models simultaneously to make informed purchase decisions.
+* **Direct Buyer-to-Seller Communication:** Instant connectivity via direct Click-to-Call (`tel:`) and WhatsApp chat triggers.
+* **Role-Based Portals:** Granular separation of concerns for Buyers, Sellers/Dealers, and System Administrators.
+* **Listing Management:** Sellers can post multiple photos, add detailed bike specifications, track approval status (Pending, Approved, Rejected, Expired), or temporarily deactivate listings.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** React, HTML5, CSS3, JavaScript, Bootstrap / Tailwind CSS[cite: 1]
-* **Backend:** Node.js, Express.js[cite: 1]
-* **Database:** MongoDB[cite: 1]
-* **Authentication:** JWT-based user & admin authentication[cite: 1]
-* **Communication & APIs:** WhatsApp API & Click-to-Call integration[cite: 1]
-* **Version Control & Tools:** Git, GitHub, VS Code[cite: 1]
+* **Frontend:** React, HTML5, CSS3, JavaScript, Bootstrap / Tailwind CSS
+* **Backend:** Node.js, Express.js
+* **Database:** MongoDB
+* **Authentication:** JWT-based user & admin authentication
+* **Communication & APIs:** WhatsApp API & Click-to-Call integration
+* **Version Control & Tools:** Git, GitHub, VS Code
 
 ---
 

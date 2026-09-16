@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ShieldCheck, Upload, FileText } from "lucide-react";
+import { ShieldCheck, FileText } from "lucide-react";
 
 export default function StepDocVerification({ formData, updateFormData, onSubmit, onPrev, isSubmitting }) {
   const [rcFile, setRcFile] = useState(formData.rcDocument || null);
@@ -28,7 +28,7 @@ export default function StepDocVerification({ formData, updateFormData, onSubmit
       <div className="border-b border-surface-border pb-4">
         <h3 className="text-lg font-bold text-surface-text">Step 4: Document Verification</h3>
         <p className="text-xs text-surface-muted mt-1">
-          Upload your vehicle Registration Certificate (RC) and a masked ID proof for strict administrator review[cite: 1]. These documents remain private and secure.
+          Upload your vehicle Registration Certificate (RC) and a masked ID proof for strict administrator review. These documents remain private and secure.
         </p>
       </div>
 
@@ -82,7 +82,7 @@ export default function StepDocVerification({ formData, updateFormData, onSubmit
       <div className="bg-surface-primary/5 border border-surface-primary/20 rounded-lg p-3 text-xs text-surface-muted leading-relaxed flex items-start gap-2">
         <ShieldCheck size={16} className="text-surface-primary shrink-0 mt-0.5" />
         <span>
-          <strong>Privacy Guarantee:</strong> RC documents and personal IDs are visible only to platform administrators for verification purposes and are never exposed publicly[cite: 1].
+          <strong>Privacy Guarantee:</strong> RC documents and personal IDs are visible only to platform administrators for verification purposes and are never exposed publicly.
         </span>
       </div>
 

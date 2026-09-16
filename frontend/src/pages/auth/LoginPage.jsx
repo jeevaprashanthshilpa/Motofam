@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { Lock, Mail, ArrowRight, ShieldCheck } from "lucide-react";
+import { Lock, Mail, ArrowRight } from "lucide-react";
 import { useAuth } from "../../context/AuthContext";
 
 export default function LoginPage() {
@@ -18,9 +18,9 @@ export default function LoginPage() {
     setError("");
     setIsLoading(true);
 
-    try {
-      // Simulate backend authentication request
-      setTimeout(() => {
+    // Simulate backend authentication request
+    setTimeout(() => {
+      try {
         const mockUser = {
           name: role === "admin" ? "System Admin" : role === "seller" ? "Authorized Seller" : "Valued Buyer",
           email,
@@ -38,11 +38,11 @@ export default function LoginPage() {
         } else {
           navigate("/bikes");
         }
-      }, 800);
-    } catch (err) {
-      setError("Invalid credentials. Please check your email and password.");
-      setIsLoading(false);
-    }
+      } catch {
+        setError("Invalid credentials. Please check your email and password.");
+        setIsLoading(false);
+      }
+    }, 800);
   };
 
   return (
@@ -55,7 +55,7 @@ export default function LoginPage() {
             THEMOTO<span className="text-surface-primary">FAM</span>
           </Link>
           <p className="text-xs text-surface-muted">
-            Sign in to access your verified two-wheeler portal[cite: 1].
+            Sign in to access your verified two-wheeler portal.
           </p>
         </div>
 

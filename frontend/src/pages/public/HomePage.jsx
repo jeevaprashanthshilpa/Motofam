@@ -69,15 +69,15 @@ export default function HomePage() {
         <div className="max-w-4xl mx-auto space-y-6 relative z-10">
           <div className="inline-flex items-center gap-2 bg-surface-primary/10 text-surface-primary border border-surface-primary/20 px-3.5 py-1.5 rounded-full text-xs font-bold">
             <ShieldCheck size={14} />
-            <span>India&apos;s Most Trusted Verified Two-Wheeler Marketplace[cite: 1]</span>
+            <span>India&apos;s Most Trusted Verified Two-Wheeler Marketplace</span>
           </div>
 
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight">
-            Find & Buy <span className="text-surface-primary">Admin-Verified</span> Bikes with Confidence[cite: 1]
+            Find & Buy <span className="text-surface-primary">Admin-Verified</span> Bikes with Confidence
           </h1>
 
           <p className="text-xs sm:text-sm text-surface-muted max-w-2xl mx-auto leading-relaxed">
-            Eliminate classified risks. Every listing on THEMOTOFAM undergoes strict document moderation and an active 30-day re-verification cycle[cite: 1].
+            Eliminate classified risks. Every listing on THEMOTOFAM undergoes strict document moderation and an active 30-day re-verification cycle.
           </p>
 
           {/* Hero Search Form */}
@@ -135,7 +135,7 @@ export default function HomePage() {
         <div className="flex items-center justify-between">
           <div>
             <h2 className="text-xl font-black text-surface-text tracking-tight">Recently Verified Inventory</h2>
-            <p className="text-xs text-surface-muted mt-0.5">Listings cleared by admin moderation within the past week[cite: 1].</p>
+            <p className="text-xs text-surface-muted mt-0.5">Listings cleared by admin moderation within the past week.</p>
           </div>
           <Link to="/bikes" className="text-xs font-bold text-surface-primary hover:underline flex items-center gap-1">
             <span>Explore Catalog</span>
@@ -202,7 +202,7 @@ export default function HomePage() {
             </div>
             <h3 className="font-bold text-base text-surface-text">Strict Admin Approvals</h3>
             <p className="text-xs text-surface-muted leading-relaxed">
-              Every vehicle registration certificate (RC) and seller identity is verified before publication to ensure total peace of mind[cite: 1].
+              Every vehicle registration certificate (RC) and seller identity is verified before publication to ensure total peace of mind.
             </p>
           </div>
 
@@ -212,7 +212,7 @@ export default function HomePage() {
             </div>
             <h3 className="font-bold text-base text-surface-text">30-Day Re-Verification</h3>
             <p className="text-xs text-surface-muted leading-relaxed">
-              Listings expire and require seller re-confirmation every 30 days, completely eliminating ghost ads and sold-out inventory[cite: 1].
+              Listings expire and require seller re-confirmation every 30 days, completely eliminating ghost ads and sold-out inventory.
             </p>
           </div>
 
@@ -222,7 +222,7 @@ export default function HomePage() {
             </div>
             <h3 className="font-bold text-base text-surface-text">Direct & Secure Deals</h3>
             <p className="text-xs text-surface-muted leading-relaxed">
-              Connect directly with verified owners via phone or WhatsApp without hidden intermediary brokerage fees[cite: 1].
+              Connect directly with verified owners via phone or WhatsApp without hidden intermediary brokerage fees.
             </p>
           </div>
         </div>

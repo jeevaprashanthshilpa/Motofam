@@ -26,7 +26,7 @@ export default function CompareDrawer() {
               Compare Bikes ({comparedBikes.length}/4)
             </h4>
             <p className="text-xs text-surface-muted">
-              Select up to 4 bikes to run a side-by-side spec check[cite: 1].
+              Select up to 4 bikes to run a side-by-side spec check.
             </p>
           </div>
         </div>
